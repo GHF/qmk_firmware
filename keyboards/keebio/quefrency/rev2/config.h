@@ -42,9 +42,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_PAD_B { F6 }
 #define ENCODERS_PAD_A_RIGHT { D6 }
 #define ENCODERS_PAD_B_RIGHT { D4 }
+#define ENCODER_DIRECTION_FLIP  // for ALPS EC11E18244A5
+#define ENCODER_RESOLUTION 2    // similarly it has half the PPR of detents/rot
+#define USB_POLLING_INTERVAL_MS 1  // 1000 Hz USB polling
+#define F_SCL 1000000L  // fastest that a 16 MHz AVR will go (TWBR, TWSR = 0)
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 20  // with sym_eager_pk, this is min pulse width, not lag
 
 #define BACKLIGHT_PIN B5
 #define CAPS_LOCK_LED_PIN B6

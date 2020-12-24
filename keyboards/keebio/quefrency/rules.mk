@@ -15,6 +15,7 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
+DEBOUNCE_TYPE = sym_eager_pk  # debouncing per key. On any state change, response is immediate, followed by DEBOUNCE milliseconds of no further input for that key
 
 SPLIT_KEYBOARD = yes
 
